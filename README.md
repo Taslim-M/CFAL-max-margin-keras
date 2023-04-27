@@ -27,7 +27,7 @@ If you find our work useful in your research or if you use parts of this code pl
 
 ```
 @article{,
-  title={Data-efficient and weakly supervised computational pathology on whole-slide images},
+  title={},
   author={},
   journal={},
   volume={},
