@@ -43,6 +43,37 @@ def run_experiment(model, train_batches, valid_batches, batch_size, num_epochs):
 
     return history
     
+
+def get_generator_output(generator, model, num_classes=9, len_gen=7180):
+  Y_TEST_ALL = []
+  Y_PRED_ALL = []
+
+  steps_per_epoch = len(generator) 
+
+  for step, (x_batch_train, y_batch_train) in enumerate(generator):
+    x_test = x_batch_train
+    y_test = y_batch_train
+    dummy_ytest = np.zeros((y_test.shape[0],y_test.shape[1]))
+    y_pred = model.predict([x_test,dummy_ytest])
+
+    Y_TEST_ALL.append(y_test)
+    Y_PRED_ALL.append(y_pred)
+    if step >= steps_per_epoch:  # manually detect the end of the epoch
+      break 
+
+  y_test =  np.concatenate(Y_TEST_ALL).ravel()
+  y_pred = np.concatenate(Y_PRED_ALL).ravel()
+
+  y_test = y_test.reshape(-1,num_classes)
+  y_pred = y_pred.reshape(-1,num_classes)
+
+  y_pred = y_pred[:len_gen]
+  y_test = y_test[:len_gen]
+
+  y_pred = np.argmax(y_pred ,axis =1)
+  y_test = np.argmax(y_test ,axis =1)
+  
+  return y_test, y_pred
     
 def print_classification_report(model, valid_batches):
     Y_pred = model.predict(valid_batches)
