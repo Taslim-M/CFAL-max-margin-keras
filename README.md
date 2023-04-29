@@ -22,7 +22,7 @@ An overview of the proposed framework. (a) During the training phase, the weight
 
 ## Feature Projections
 
-<img src="imgs/projections.gif.jpg" width="700px" align="center" />
+<img src="imgs/projections.gif" width="700px" align="center" />
 
 The 2D feature projections depicted above are from the CRC dataset, where CFAL appears to have more separable learned 2D projections.
 
