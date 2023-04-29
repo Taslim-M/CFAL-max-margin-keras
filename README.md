@@ -20,6 +20,11 @@ An overview of the proposed framework. (a) During the training phase, the weight
 - keras == 2.10.0
 
 
+## Feature Projections
+
+<img src="imgs/projections.gif.jpg" width="700px" align="center" />
+
+The 2D feature projections depicted above are from the CRC dataset, where CFAL appears to have more separable learned 2D projections.
 
 ## Reference
 If you find our work useful in your research or if you use parts of this code please consider citing our [paper]():
