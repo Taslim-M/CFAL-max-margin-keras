@@ -32,13 +32,13 @@ If you find our work useful in your research or if you use parts of this code pl
 
 ```
 @article{,
-  title={},
-  author={},
-  journal={},
-  volume={},
-  number={},
-  pages={},
-  year={},
-  publisher={}
+  title={Center-Focused Affinity Loss for Class Imbalance Histology Image Classification},
+  author={Taslim Mahbub et al.},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  volume={28},
+  number={2},
+  pages={952-963},
+  year={2024},
+  publisher={IEEE}
 }
 ```
